@@ -18,6 +18,7 @@ contract SafeModeratorOverridable is AddressProviderService, IGuard {
      * @dev Token interface change used to bypass foundry coverage issue
      * Refer https://github.com/foundry-rs/foundry/issues/5729
      */
+    // @audit GO dont assign variables that already 0 
     uint8 public constant DIFFER_SAFE_MOD = 0;
 
     constructor(address _addressProvider) AddressProviderService(_addressProvider) {}
